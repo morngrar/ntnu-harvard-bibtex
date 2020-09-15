@@ -1,0 +1,65 @@
+\documentclass[norsk, a4paper, 11pt]{article}
+\usepackage[utf8]{inputenc}
+\edef\restoreparindent{\parindent=\the\parindent\relax}
+\usepackage{parskip}
+\restoreparindent
+\usepackage[hyphens, spaces, obeyspaces]{url}
+\usepackage{hyperref}
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    citecolor=darkblue,
+}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{libertine}          % Linux Libertine font
+\usepackage{listings}           % syntaxhighlightet kode
+\lstset{                        % Setter settings for code listings
+    numbers=left,
+    numberstyle=\normalsize,
+    stepnumber=1,
+    numbersep=5pt,
+    frame=lines,
+    showstringspaces=false,
+    aboveskip=6mm,
+    belowskip=8mm,
+    basicstyle=\small,
+}
+
+
+
+% Noen custom kommandoer for å ikke bli koko
+\renewcommand{\bf}[1]{\textbf{#1}}  % bold font
+\renewcommand{\it}[1]{\textit{#1}}  % italics font
+\renewcommand{\sc}[1]{\textsc{#1}}  % small caps font
+\newcommand{\code}[1]{{\small \texttt{#1}}}  % markup for inline kodeeksempel
+\newcommand{\q}{\enquote}                       % forkortelser av qoutekommando
+\newcommand{\bq}[3]{\blockquote[{\citealt[#3]{#2}}]{#1}}
+
+
+% referanser
+\usepackage{natbib}
+\bibliographystyle{ntnu-harvard-en}
+
+\title{Example of ntnu-harvard in english}
+\author{Svein-Kåre Bjørnsen}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This is an example of the NTNU harvard style in latex using bibtex.
+Plus a few extra snippets in the \code{.tex} file. Feel free to use this file as a
+template for your own work.
+\end{abstract}
+
+\input{example-content}
+
+\bibliography{referanser}
+\end{document}
