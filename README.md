@@ -6,6 +6,9 @@ Denne bibtexstilen er et arbeid under utvikling for å bøte på dette. Og intro
 
 **Merk:** Dette er en *bibtex* stil for bruk sammen med latex. Den fungerer ikke sammen med biblatex, men er ment å brukes sammen med natbib.
 
+## Encoding på `.tex` filer
+For å være sikker på at sortering av referanselisten blir korrekt med skandinaviske forfatternavn, vennligst bruk UTF-8 som encoding på dine latex kildefiler. Dette er en enkel innstilling de aller fleste teksteditorer har, og er sannsynligvis kun relevant om du bruker Windows som operativsystem.
+
 ## Hvordan bruke denne stilen
 
 Det antas at du som leser er noenlunde kjent med hvordan man legger kilder inn i en `.bib` fil. Om dette ikke er tilfelle, se [denne siden](https://www.latex-tutorial.com/tutorials/bibtex/) for en innføring i dette.
