@@ -1212,6 +1212,7 @@ FUNCTION {webarticle}
   fin.entry
 }
 FUNCTION {video} {webarticle}
+FUNCTION {website} {webarticle}
 
 FUNCTION {webarticle-organization}
 { output.bibitem
@@ -1236,6 +1237,7 @@ FUNCTION {website-noauthor}
   format.url output
   fin.entry
 }
+FUNCTION {webarticle-noauthor} {website-noauthor}
 
 FUNCTION {wiki-noauthor}
 { output.bibitem

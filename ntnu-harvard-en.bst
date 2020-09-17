@@ -1212,6 +1212,7 @@ FUNCTION {webarticle}
   fin.entry
 }
 FUNCTION {video} {webarticle}
+FUNCTION {website} {webarticle}
 
 FUNCTION {webarticle-organization}
 { output.bibitem
@@ -1236,6 +1237,7 @@ FUNCTION {website-noauthor}
   format.url output
   fin.entry
 }
+FUNCTION {webarticle-noauthor} {website-noauthor}
 
 FUNCTION {wiki-noauthor}
 { output.bibitem
@@ -1728,7 +1730,7 @@ FUNCTION {begin.bib}
   write$ newline$
   "\providecommand{\url}[1]{\texttt{#1}}"
   write$ newline$
-  "\providecommand{\urlprefix}{\bblavailableat{} }"
+  "\providecommand{\urlprefix}{\bblavailableat{}: }"
   write$ newline$
   "\expandafter\ifx\csname urlstyle\endcsname\relax"
   write$ newline$
