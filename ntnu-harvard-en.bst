@@ -393,7 +393,7 @@ FUNCTION {format.url}
             { pop$ }
             {
                 pop$
-                " (Hentet: " * urldate * ")" *
+                " (\bblaccessed{}: " * urldate * ")" *
             }
         if$
     }
@@ -1215,7 +1215,7 @@ FUNCTION {video} {webarticle}
 
 FUNCTION {webarticle-organization}
 { output.bibitem
-  author output
+  author add.blank output
   format.date "year" output.check
   date.block
   format.btitle "title" output.check
@@ -1497,7 +1497,7 @@ FUNCTION {calc.label}
             or
                 {
                     author
-                    %", " *
+                    ", " *
                     duplicate$ 'short.list :=
                 }
                 {
@@ -1728,7 +1728,7 @@ FUNCTION {begin.bib}
   write$ newline$
   "\providecommand{\url}[1]{\texttt{#1}}"
   write$ newline$
-  "\providecommand{\urlprefix}{Tilgjengelig fra: }"
+  "\providecommand{\urlprefix}{\bblavailableat{} }"
   write$ newline$
   "\expandafter\ifx\csname urlstyle\endcsname\relax"
   write$ newline$
