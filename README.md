@@ -51,7 +51,7 @@ Grunnen til at man kjører `pdflatex` flere ganger er for å få alle kryssrefer
 
 
 ## Nye bibtex entrytyper introdusert i denne stilen
-Denne bibtexstilen fraviker med vilje etablerte 'standarder' for hvilke bibtex entry typer man skal bruke, og introduserer flere nye typer, for å være mer tilpasset eksemplene på [innsida](https://innsida.ntnu.no/wiki/-/wiki/Norsk/Bruke+referansestilen+Harvard).
+Denne bibtexstilen fraviker med vilje etablerte 'standarder' for hvilke bibtex entry typer man skal bruke, og introduserer flere nye typer, for å være mer tilpasset eksemplene på [ntnu.no](https://www.ntnu.no/viko/harvard-eksempler).
 
 De øvrige 'vanlige' entry typene som `book` og `incollection` skal også fungere som normalt. For en komplett oversikt over de originale entrytypene, se [denne siden](http://bib-it.sourceforge.net/help/fieldsAndEntryTypes.php).
 
