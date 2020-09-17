@@ -58,7 +58,6 @@ De øvrige 'vanlige' entry typene som `book` og `incollection` skal også funger
 Følgende er nye entrytyper introdusert med denne stilen:
 - image
     - Brukes for å referere til bilder funnet på nettet jmf. eksempelet 'Digitalt bilde' på [ntnu.no](https://www.ntnu.no/viko/harvard-eksempler).
-
     - Har følgende støttede felter:
         - title
         - author
