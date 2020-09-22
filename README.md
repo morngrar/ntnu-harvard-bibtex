@@ -36,7 +36,7 @@ Og følgende helt mot slutten, rett før `\end{document}`:
 Hvor `referanser` byttes ut med navnet på din `.bib` fil. **Merk at du ikke trenger å ha med filutvidelsen i filnavnet her**.
 
 #### Velg språk
-Denne stilen støtter norsk og engelsk, så langt, og **norsk er standard**. For å endre språket i referanselisten må du putte `\def\ntnu-harvard-en{}` et sted i *preamblen* din (dvs. *før* `\begin{document}`).
+Denne stilen støtter norsk og engelsk, så langt, og **norsk er standard**. For å endre språket i referanselisten må du putte `\def\ntnu-harvard-en{}` et sted i *preamblen* din (dvs. *før* `\begin{document}`). Se `example-english.tex`.
 
 ### Kompiler dokumentet
 Eksemplet under er kommandoer du må kjøre for å kompilere et latexdokument som har navnet `main.tex`, under linux eller OSX. Samme kommandoer skal goså fungere på windows. Og man kan sette opp editorer eller IDE'er til å gjøre dette for seg, eller skrive kommandoene inn i en scriptfil og heller kjøre denne. Dollartegnet representerer kommandolinjens prompt, og er ikke en del av selve kommandoen.
