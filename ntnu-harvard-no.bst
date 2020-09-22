@@ -1382,13 +1382,9 @@ FUNCTION {convert.chr}
 
   % Æ/Ä and æ/ä
   n #134 =
-  n #132 =
-  or
-    { pop$ "zzzx" }
-    'skip$
-  if$
+  n #132 = or
   n #166 =
-  n #164 =
+  n #164 = or
   or
     { pop$ "zzzx" }
     'skip$
@@ -1396,13 +1392,9 @@ FUNCTION {convert.chr}
 
   % Ø/Ö and ø/ö
   n #152 =
-  n #150 =
-  or
-    { pop$ "zzzy" }
-    'skip$
-  if$
+  n #150 = or
   n #184 =
-  n #182 =
+  n #182 = or
   or
     { pop$ "zzzy" }
     'skip$
@@ -1410,10 +1402,8 @@ FUNCTION {convert.chr}
 
   % Å and å
   n #133 =
-    { pop$ "zzzz" }
-    'skip$
-  if$
   n #165 =
+  or
     { pop$ "zzzz" }
     'skip$
   if$
