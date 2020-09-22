@@ -1796,7 +1796,7 @@ FUNCTION {begin.bib}
     'skip$
     { preamble$ write$ newline$ }
   if$
-  "\input{englishbst.tex}" write$ newline$
+  "\input{ntnu-harvard-babel.tex}" write$ newline$
   "\renewcommand{\refname}{" bbl.references * "}" * write$ newline$     % article class
   "\renewcommand{\bibname}{" bbl.references * "}" * write$ newline$     % book and report class
   "\newpage" write$ newline$                                    % ensure referenses on new page

@@ -16,19 +16,16 @@ Denne stilen introduserer som nevnt egne entrytyper som ikke har vært med i bib
 ### Encoding på `.tex` filer
 For å være sikker på at sortering av referanselisten blir korrekt med skandinaviske forfatternavn, vennligst bruk UTF-8 som encoding på dine latex kildefiler. Dette er en enkel innstilling de aller fleste teksteditorer har, og er sannsynligvis standard om du ikke bruker Windows som operativsystem.
 
-
-### Velg språk
-Denne stilen støtter norsk og engelsk, så langt. Og for å bruke den trenger du å kopiere to filer fra dette repoet til mappen hvor du har latexdokumentet ditt, men hvilke to dette er avhenger av hvilket språk du vil skrive på. 
-- Norsk
-    - `ntnu-harvard-no.bst` og `norskbst.tex`
-- Engelsk
-    - `ntnu-harvard-en.bst` og `englishbst.tex`
+### Kopiere filer
+For å bruke den trenger du å kopiere to filer fra dette repoet til mappen hvor du har hovedfilen til latexdokumentet ditt. Disse filene er:
+- `ntnu-harvard.bst`
+- `ntnu-harvard-babel.tex`
 
 ### Legg bibliografikommandoer til latex
 I ditt dokuments hovedfil legger du til følgende i *preamblen* (før `\begin{document}`) for å bruke stilen:
 
     \usepackage{natbib}
-    \bibliographystyle{ntnu-harvard-no}
+    \bibliographystyle{ntnu-harvard}
 
 Om du har valgt engelsk, skriv `ntnu-harvard-en` i stedet!
 
@@ -37,6 +34,9 @@ Og følgende helt mot slutten, rett før `\end{document}`:
     \bibliography{referanser}
 
 Hvor `referanser` byttes ut med navnet på din `.bib` fil. **Merk at du ikke trenger å ha med filutvidelsen i filnavnet her**.
+
+#### Velg språk
+Denne stilen støtter norsk og engelsk, så langt, og **norsk er standard**. For å endre språket i referanselisten må du putte `\def\ntnu-harvard-en{}` et sted i *preamblen* din (dvs. *før* `\begin{document}`). Se `example-english.tex`.
 
 ### Kompiler dokumentet
 Eksemplet under er kommandoer du må kjøre for å kompilere et latexdokument som har navnet `main.tex`, under linux eller OSX. Samme kommandoer skal goså fungere på windows. Og man kan sette opp editorer eller IDE'er til å gjøre dette for seg, eller skrive kommandoene inn i en scriptfil og heller kjøre denne. Dollartegnet representerer kommandolinjens prompt, og er ikke en del av selve kommandoen.
