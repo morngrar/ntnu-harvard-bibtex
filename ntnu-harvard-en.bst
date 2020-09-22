@@ -1372,9 +1372,85 @@ FUNCTION {unpublished}
 
 FUNCTION {default.type} { misc }
 READ
-FUNCTION {sortify}  % TODO: bytte ut å med et symbol som sorteres etter ø
+% takes int and returns the sorting char
+INTEGERS {n}
+FUNCTION {convert.chr}
+{
+  duplicate$
+  chr.to.int$
+  'n :=
+
+  % Æ/Ä and æ/ä
+  n #134 =
+  n #132 = or
+  n #166 =
+  n #164 = or
+  or
+    { pop$ "zzzx" }
+    'skip$
+  if$
+
+  % Ø/Ö and ø/ö
+  n #152 =
+  n #150 = or
+  n #184 =
+  n #182 = or
+  or
+    { pop$ "zzzy" }
+    'skip$
+  if$
+
+  % Å and å
+  n #133 =
+  n #165 =
+  or
+    { pop$ "zzzz" }
+    'skip$
+  if$
+}
+
+STRINGS {conversion.buffer}
+FUNCTION {buffer.append}
+{
+  conversion.buffer swap$ *
+  'conversion.buffer :=
+}
+
+FUNCTION {convert.special.chars}
+{
+  "" 'conversion.buffer :=
+  {duplicate$ empty$ not}
+    {
+      duplicate$ #1 #1 substring$
+      duplicate$ chr.to.int$
+      #195 =   % special char
+        {
+          % pick next byte
+          pop$
+          #2 global.max$ substring$
+          duplicate$ #1 #1 substring$
+
+          % convert to sorting char
+          convert.chr
+        }
+        'skip$
+      if$
+
+      buffer.append
+
+      #2 global.max$ substring$
+    }
+  while$
+  pop$      % handles \0 at end of string
+
+  % putting the result onto stack
+  conversion.buffer
+}
+
+FUNCTION {sortify}
 { purify$
   "l" change.case$
+  convert.special.chars
 }
 INTEGERS { len }
 FUNCTION {chop.word}
