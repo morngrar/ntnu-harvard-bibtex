@@ -27,8 +27,6 @@ I ditt dokuments hovedfil legger du til følgende i *preamblen* (før `\begin{do
     \usepackage{natbib}
     \bibliographystyle{ntnu-harvard}
 
-Om du har valgt engelsk, skriv `ntnu-harvard-en` i stedet!
-
 Og følgende helt mot slutten, rett før `\end{document}`:
 
     \bibliography{referanser}
