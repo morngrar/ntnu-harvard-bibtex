@@ -16,7 +16,6 @@ Denne stilen introduserer som nevnt egne entrytyper som ikke har vært med i bib
 ### Encoding på `.tex` filer
 For å være sikker på at sortering av referanselisten blir korrekt med skandinaviske forfatternavn, vennligst bruk UTF-8 som encoding på dine latex kildefiler. Dette er en enkel innstilling de aller fleste teksteditorer har, og er sannsynligvis standard om du ikke bruker Windows som operativsystem.
 
-**Merk:** Korrekt sortering av æ, ø og å i referanselisten er ikke implementert enda, men er høyt prioritert. Men for at dette skal fungere i fremtiden er det *nødvendig* at du bruker utf-8.
 
 ### Velg språk
 Denne stilen støtter norsk og engelsk, så langt. Og for å bruke den trenger du å kopiere to filer fra dette repoet til mappen hvor du har latexdokumentet ditt, men hvilke to dette er avhenger av hvilket språk du vil skrive på. 
