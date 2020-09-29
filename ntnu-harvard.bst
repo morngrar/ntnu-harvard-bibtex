@@ -1000,6 +1000,8 @@ FUNCTION {book}
       new.block
       format.number.series output
       new.sentence
+      format.edition output
+      new.block
       format.publisher.address output
     }
     {
@@ -1007,7 +1009,6 @@ FUNCTION {book}
       format.book.crossref output.nonnull
     }
   if$
-  format.edition output
   format.doi output
   new.block
   format.note output
