@@ -1576,7 +1576,6 @@ FUNCTION {calc.label}
             or
                 {
                     author
-                    ", " *
                     duplicate$ 'short.list :=
                 }
                 {
